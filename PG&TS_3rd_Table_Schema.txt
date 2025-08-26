@@ -1,0 +1,37 @@
+Postgresql DB - "public.3rd_table"
+    user_id BIGINT,
+    session_id UUID,
+    page_url TEXT,
+    clicks INTEGER,
+    scroll_depth DOUBLE PRECISION,
+    event_type VARCHAR,
+    event_sub_type VARCHAR,
+    event_timestamp TIMESTAMP,
+    event_date DATE,              -- parquet se string, PG me DATE
+    device_type TEXT,
+    browser VARCHAR,
+    latency_ms DOUBLE PRECISION,
+    network_speed DOUBLE PRECISION,
+    referrer VARCHAR,
+    uuid VARCHAR,
+    updated_at TIMESTAMP,
+    updated_date DATE  
+
+TimeScale DB - "public.3rd_table"
+    "USERID": "int64",
+    "SESSIONID": "string",
+    "PAGE_URL": "string",
+    "CLICKS": "int64",
+    "SCROLL_DEPTH": "float64",
+    "EVENT_TYPE": "string",
+    "EVENT_SUB_TYPE": "string",
+    "EVENT_TIMESTAMP": "datetime64[ns]",
+    "EVENT_DATE": "string",   # export as string for parquet
+    "DEVICE_TYPE": "string",
+    "BROWSER": "string",
+    "LATENCY_MS": "float64",
+    "NETWORK_SPEED": "float64",
+    "REFERRER": "string",
+    "UUID": "string",
+    "UPDATED_AT": "datetime64[ns]",
+    "UPDATED_DATE": "string"  # export as string for parquet

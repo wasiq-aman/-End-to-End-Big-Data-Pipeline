@@ -1,0 +1,19 @@
+# Create virtual environment
+python -m venv venv
+
+# Activate (Linux / macOS)
+source venv/bin/activate
+
+# Activate (Windows PowerShell)
+venv\Scripts\activate
+
+pip install -r requirements.txt
+
+# Step 1 → Load data into Timescale table
+python 1st_table.py    
+
+# Step 2 → Load data into table
+python 2nd_table.py     
+
+# Step 3 → Load data into table
+python 3rd_table.py   

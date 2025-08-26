@@ -1,0 +1,30 @@
+Postgresql DB - "public.2nd_table"
+    user_id          BIGINT,
+    session_id       UUID,
+    page_url         TEXT,
+    clicks           INTEGER,
+    scroll_depth     DOUBLE PRECISION,
+    event_type       VARCHAR,
+    event_sub_type   VARCHAR,
+    "EVENT_DATE"     DATE,   -- intentionally capitalized
+    device_type      TEXT,
+    browser          VARCHAR,
+    latency_ms       DOUBLE PRECISION,
+    network_speed    DOUBLE PRECISION,
+    referrer         VARCHAR
+
+TimeScale DB - "public.2nd_table"
+    'user_id': 'bigint',
+    'session_id': 'uuid',
+    'page_url': 'text',
+    'clicks': 'integer',
+    'scroll_depth': 'double precision',
+    'event_type': 'character varying',
+    'event_sub_type': 'character varying',
+    'EVENT_DATE': 'date',   # intentionally capitalized dummy column
+    'device_type': 'text',
+    'browser': 'character varying',
+    'latency_ms': 'double precision',
+    'network_speed': 'double precision',
+    'referrer': 'character varying'
+
